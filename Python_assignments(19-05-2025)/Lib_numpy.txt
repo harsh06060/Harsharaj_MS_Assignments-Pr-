@@ -1,0 +1,22 @@
+Libraries Used in NumPy
+NumPy is a Python library for numerical computations, especially with arrays and matrices. It’s super fast and widely used for data science and math. NumPy relies on a few underlying libraries to work its magic. Here’s a very simple breakdown of the main ones:
+
+1. BLAS (Basic Linear Algebra Subprograms):
+What it does: Handles basic math operations like matrix multiplication.
+Why NumPy uses it: Makes array calculations super fast.
+Example: NumPy’s array operations (e.g., dot product) use BLAS for speed.
+
+2. LAPACK (Linear Algebra Package):
+What it does: Provides advanced math functions like solving equations or eigenvalues.
+Why NumPy uses it: For complex linear algebra tasks in NumPy.
+Example: Used in functions like numpy.linalg.inv (matrix inverse).
+
+3. Python Standard Library:
+What it does: NumPy uses Python’s built-in modules like math for basic math.
+Why NumPy uses it: To integrate with Python’s core functionality.
+Example: NumPy builds on Python’s number handling.
+
+4. C Libraries (like CFFI or ctypes):
+What it does: Allows NumPy to run fast C code for performance.
+Why NumPy uses it: Speeds up array operations by bypassing Python’s slowness.
+Example: NumPy’s core is written in C for efficiency.
