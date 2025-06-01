@@ -10,7 +10,7 @@ __pycache__/
 .spark-staging-*/
 .dbutils-*/
 
-# Keep notebooks and relevant files
+# Keep notebooks and relevant files in it
 !*.ipynb
 !*.py
 !*.sql
