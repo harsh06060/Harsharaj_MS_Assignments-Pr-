@@ -1,2 +1,2 @@
-# Python_Assignments
-Assignments related to python, by Harsharaj M S
+# Technical Assignments
+Assignments related to Python, DataBricks, PySpark, PowerBI by Harsharaj M S
