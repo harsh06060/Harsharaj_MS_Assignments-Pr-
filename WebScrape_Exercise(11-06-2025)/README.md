@@ -188,6 +188,7 @@ Tables like prices_volumes_table with columns metric, date, value.
 Debug output like Found 3 tables for prices_volumes.
 
 **Why This Approach?**
+
 **Selenium:** Chosen because earlier attempts with requests failed due to JavaScript-rendered tables.
 **Chrome Installation:** Required to fix the cannot find Chrome binary error, using apt-get to install Chrome on the cluster.
 **Data Cleaning:** Handles spaces and commas to match your CSV data structure.
