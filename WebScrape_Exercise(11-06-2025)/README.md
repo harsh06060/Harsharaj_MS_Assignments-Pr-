@@ -194,3 +194,5 @@ Debug output like Found 3 tables for prices_volumes.
 **Data Cleaning:** Handles spaces and commas to match your CSV data structure.
 **Delta Tables:** Ensures scalable, reliable storage compatible with the Hive metastore.
 **Debugging:** Added to confirm table extraction, addressing earlier Table index not found errors.
+
+**:)**
