@@ -142,14 +142,14 @@ def scrape_and_parse_table(url, table_index, table_name):
 Selenium Setup: Configures a headless Chrome browser (no UI, runs without a graphical interface for efficiency) with options to work in Databricks (--no-sandbox, --disable-dev-shm-usage). Sets the Chrome binary path to /usr/bin/google-chrome (installed earlier).
 **Webpage Load:** Loads the URL, waits 10 seconds for JavaScript to render tables.
 **HTML Parsing:** Uses BeautifulSoup to extract <table> tags, prints the number of tables found for debugging.
+
 **Table Processing:**
 Prices and Volumes: Creates rows with metric (e.g., “Prices (EUR/MWh)”), date (e.g., “Thu_06/05”), and value (float).
 Block Products: Creates rows with product (e.g., “Base (01-24)”), date, and price (float).
 Hourly Products: Creates rows with hour (e.g., “0 -- 1”), metric (e.g., “EUR/MWh”), date, and value (float).
 **DataFrame Creation:** Defines a schema for each table and creates a PySpark DataFrame.
 **Cleanup:** Closes the browser with driver.quit().
-**Why:**
-Selenium is needed because the tables are JavaScript-rendered, as seen in earlier errors (Table index 0 not found with requests).
+**Why:**Selenium is needed because the tables are JavaScript-rendered, as seen in earlier errors (Table index 0 not found with requests).
 The schema ensures data types (e.g., FloatType for values) for reliable storage.
 Debugging helps confirm tables are found.
 Example:
@@ -181,10 +181,10 @@ Displays each DataFrame for verification.
 **Why:**
 Delta tables are reliable for storage in Databricks Community Edition, avoiding Unity Catalog issues.
 Displaying DataFrames lets you check the data visually.
-Output:
+**Output:**
 Tables like prices_volumes_table with columns metric, date, value.
 Debug output like Found 3 tables for prices_volumes.
-Why This Approach?
+**Why This Approach?**
 Selenium: Chosen because earlier attempts with requests failed due to JavaScript-rendered tables.
 Chrome Installation: Required to fix the cannot find Chrome binary error, using apt-get to install Chrome on the cluster.
 Data Cleaning: Handles spaces and commas to match your CSV data structure.
