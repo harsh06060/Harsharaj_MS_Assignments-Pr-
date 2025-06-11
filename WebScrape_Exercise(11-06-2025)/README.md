@@ -178,15 +178,18 @@ Defines the URL to scrape.
 Calls scrape_and_parse_table for each table (indices 0, 1, 2).
 If a DataFrame is returned, saves it as a Delta table in the Hive metastore with mode("overwrite") to replace existing tables.
 Displays each DataFrame for verification.
+
 **Why:**
 Delta tables are reliable for storage in Databricks Community Edition, avoiding Unity Catalog issues.
 Displaying DataFrames lets you check the data visually.
+
 **Output:**
 Tables like prices_volumes_table with columns metric, date, value.
 Debug output like Found 3 tables for prices_volumes.
+
 **Why This Approach?**
-Selenium: Chosen because earlier attempts with requests failed due to JavaScript-rendered tables.
-Chrome Installation: Required to fix the cannot find Chrome binary error, using apt-get to install Chrome on the cluster.
-Data Cleaning: Handles spaces and commas to match your CSV data structure.
-Delta Tables: Ensures scalable, reliable storage compatible with the Hive metastore.
-Debugging: Added to confirm table extraction, addressing earlier Table index not found errors.
+**Selenium:** Chosen because earlier attempts with requests failed due to JavaScript-rendered tables.
+**Chrome Installation:** Required to fix the cannot find Chrome binary error, using apt-get to install Chrome on the cluster.
+**Data Cleaning:** Handles spaces and commas to match your CSV data structure.
+**Delta Tables:** Ensures scalable, reliable storage compatible with the Hive metastore.
+**Debugging:** Added to confirm table extraction, addressing earlier Table index not found errors.
